@@ -1,0 +1,34 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html, body {
+  width: $default-width;
+  height: $default-height;
+  margin: 0;
+}
+
+body {
+  background: #9FEDE9;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6em;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+
+  @include default-flex();
+}
+
+li {
+  list-style: none;
+}
+
+#root {
+  width: $default-width;
+  height: $default-height;
+}
+
+.App {
+  width: $default-width;
+  height: $default-height;
+  @include default-flex();
+}

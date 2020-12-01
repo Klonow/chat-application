@@ -1,0 +1,6 @@
+@import '../../../variables.scss';
+
+.dialog-alert {
+  height: $default-height;
+  @include default-flex()
+}

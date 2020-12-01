@@ -1,0 +1,9 @@
+$default-width: 100%;
+$default-height: 100%;
+$default-transition: all 0.5s ease-in-out;
+
+@mixin default-flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
