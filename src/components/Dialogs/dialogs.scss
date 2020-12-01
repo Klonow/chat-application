@@ -1,0 +1,70 @@
+.dialog-sender {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  padding: 15px 30px 0 0;
+
+  &__img {
+    min-width: 60px;
+    height: 60px;
+    background: #6f729a;
+    border-radius: 100px;
+    order: 2;
+  }
+
+  &__message {
+    background: #6f729a;
+    display: inline-block;
+    border-radius: 25px 0 25px 25px;
+    max-width: 65%;
+    padding: 15px;
+    margin: 40px 20px 0 0;
+    order: 1;
+  }
+}
+
+.dialog-recipient {
+  display: flex;
+  padding: 15px 0 0 30px;
+  color: black;
+
+  &__img {
+    min-width: 60px;
+    height: 60px;
+    background: #6f729a;
+    border-radius: 100px;
+  }
+
+  &__message {
+    background: #f7f7fd;
+    display: inline-block;
+    border-radius: 0 25px 25px 25px;
+    max-width: 65%;
+    padding: 15px;
+    margin: 40px 0 0 20px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .dialog {
+    font-size: 19px;
+  }
+
+  .dialog-sender {
+    padding: 15px 15px 0 0;
+
+    &__message {
+      margin: 20px 10px 0 0;
+
+    }
+  }
+
+
+  .dialog-recipient {
+    padding: 15px 0 0 15px;
+
+    &__ {
+      margin: 20px 0 0 10px;
+    }
+  }
+}

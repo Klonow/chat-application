@@ -1,0 +1,52 @@
+@import "../../../variables";
+
+.form__panel {
+  width: 95%;
+  padding: 60px calc(5% + 60px) 60px 60px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-panel {
+  &__error-validation {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+  }
+}
+
+.form-group {
+  &__username, &__password {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 0 0 20px;
+  }
+
+  &__btn button, &__btn-disabled button {
+    background: #6F729A;
+    outline: none;
+    width: $default-width;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__btn-disabled button {
+    background: silver;
+    cursor: no-drop;
+  }
+}
+

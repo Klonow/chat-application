@@ -1,0 +1,142 @@
+@import '../../../variables';
+
+.form__toggle {
+  background: #6F729A;
+  transition: $default-transition;
+  width: 600px;
+  position: absolute;
+  left: 95%;
+  z-index: 5;
+  padding: 0 calc(5% + 60px) 60px 60px;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateX(-20px);
+  }
+}
+
+.form-toggle_active {
+  width: 400px;
+  left: 10%;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+.form-toggle_active .form-group__btn button{
+  color: #6F729A;
+  background: white;
+}
+
+.form-toggle_active .form-panel__header h1 {
+  color: white;
+}
+
+.form-toggle label {
+  color: white;
+}
+
+.form__open {
+  position: absolute;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  cursor:pointer;
+
+  &:before {
+    left: 15%;
+  }
+  &:after {
+    left: 30%;
+  }
+
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    width: 4px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+}
+
+.form-panel__header h1 {
+  margin: 0;
+  color: #6F729A;
+}
+
+.form-toggle__close {
+  z-index: 10;
+  position: absolute;
+  top: 70px;
+  right: 60px;
+  background: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  transform-origin: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 4px;
+    background: #6F729A;
+  }
+
+  &:before {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:after {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .form {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .form__toggle {
+    width: 500px;
+    padding: 0;
+  }
+
+  .form-toggle {
+    padding: 0 60px 0 60px;
+  }
+
+  .form-toggle_active {
+    width: 100vw;
+    left: 0;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .form-toggle {
+    padding: 0 20px 0 20px;
+  }
+  .form__panel {
+    padding: 0 calc(5% + 20px) 0 20px;
+  }
+}

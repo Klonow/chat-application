@@ -1,0 +1,44 @@
+@import '../../App.scss';
+
+.list-users__item {
+  @include default-flex();
+  flex-direction: column;
+  margin-bottom: 10px;
+  height: 120px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.list-users__item-img {
+  position: relative;
+  background: #6f729a;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  min-width: 60px;
+  height: 60px;
+}
+
+.user-online {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  border: #fff 2px solid;
+}
+
+.user-online_offline {
+  background: silver;
+}
+
+.user-online_online {
+  background: #7cd355;
+}
+
+.list-users__item-user-name {
+  max-width: $default-width;
+  text-align: center;
+  word-break: break-all;
+}
+
